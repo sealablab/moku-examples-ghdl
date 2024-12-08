@@ -1,3 +1,34 @@
 # moku-examples-ghdl 
-This is a fork of the [official moku examples]
-https://github.com/liquidinstruments/moku-examples/blob/main/mcc/Advanced/DCSequencer/DCSequencer.vhd
+This is a fork of the official moku examples and a mashup of the ghdl project template Makefile
+
+# GHDL project template for Moku Cloud Compile targets
+
+A template for RTL design project using GHDL.
+![splash](https://github.com/sealablab/moku_dc_seq/blob/trunk/moku_makefile.png?raw=true)
+
+The directories in the project (and the rule of thumb for each) are:
+#JCRET2HERE 2025-12-08
+
+* source: synthesizable files.
+* sim: non-synthesizable files for simulations/testbenches.
+* mock: mock files, e.g. mocking a sensor (can be synthesizable).
+* in: input files for testbenches, e.g. *.csv*.
+* out: output files from testbenches, e.g. *.csv* and *.ghw*.
+* .cache: work folder.
+
+The Makefile recursively analyses, elaborates and executes each file accordingly.
+
+For the Makefile options, do ``make help``.
+
+The example code provided was taken from 
+[VHDL-guide - testbench](https://vhdlguide.readthedocs.io/en/latest/vhdl/testbench.html)
+solely to illustrate this template.
+
+You can undo one commit to clear the example code and remove this README.md.
+
+Tip:
+Compile and install [GHDL with LLVM backend and IEEE library](https://ghdl.github.io/ghdl/development/building/LLVM.html).
+
+License: [The Unlicense](https://unlicense.org/)
+# See Also
+
